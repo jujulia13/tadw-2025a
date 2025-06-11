@@ -23,15 +23,14 @@
 
         $produtos = (listarProdutos($conexao));
 
-        foreach ($produtos as $p) {
+        foreach ($produto as $p) {
 
 
-            echo "<input type='checkbox' name='produtos[]' value='{$p['idproduto']}'> {$p['nome']}";
-            echo "<input type = 'number' name='quantidade[]'>";
-            <br> <br> <br>
-        }
+           echo "<input type='checkbox' name='produtos[]' value='{$p['idproduto']}'> {$p['nome']}";
+           echo "<input type = 'number' name='quantidade[]'>";
+    }
         
-        ?>
+         ?>
         
              
     

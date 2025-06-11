@@ -6,8 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Mercado Online</h1>
-    <form method = "POST">
+     <form action="test.php" method = "POST">
+
+        <h1>Mercado Online</h1>
       
             <legend><h3>Dados do Cliente</h3></legend> <br> 
             <label>Nome: <input type = "text" name= "cliente" required></label> <br> <br><br>
@@ -15,11 +16,26 @@
         
 
         
-        <legend><h3>Produtos</h3></legend><br> <br>
-        <label>
+        <h3>Produtos</h3><br> <br>
+        <?php
+        require_once "funcoes.php";
+        require_once "conexao.php";
+
+        $produtos = (listarProdutos($conexao));
+
+        foreach ($produtos as $p) {
+
+
+            echo "<input type='checkbox' name='produtos[]' value='{$p['idproduto']}'> {$p['nome']}";
+            echo "<input type = 'number' name='quantidade[]'>";
+            <br> <br> <br>
+        }
+        
+        ?>
+        
              
     
-        </label> <br> <br><br>
+        
 
 
 

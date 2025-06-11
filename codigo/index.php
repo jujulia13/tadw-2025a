@@ -35,16 +35,7 @@
         
              
     
-        
-
-
-
-
-
-
-
-
-        <button type="submit"> Finalizar Compra</button>
+       <button type="submit"> Finalizar Compra</button>
        
 
 
